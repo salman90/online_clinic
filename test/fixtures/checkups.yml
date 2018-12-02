@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  middle_name: MyString
+  file_number: 1
+  age: 1
+  weight_before_surgery: 9.99
+  height: 9.99
+  body_mass_before_surgery: 9.99
+  classification_of_body_mass: 1
+  perfect_weight: 9.99
+  extra_weight: 9.99
+  type_of_surgery: MyString
+  associated_diseases: MyText
+  change_in_associated_diseases: MyText
+  current_weight: 9.99
+  percentage_of_lost_weight: 9.99
+  duration_of_surgery: 1
+
+two:
+  first_name: MyString
+  last_name: MyString
+  middle_name: MyString
+  file_number: 1
+  age: 1
+  weight_before_surgery: 9.99
+  height: 9.99
+  body_mass_before_surgery: 9.99
+  classification_of_body_mass: 1
+  perfect_weight: 9.99
+  extra_weight: 9.99
+  type_of_surgery: MyString
+  associated_diseases: MyText
+  change_in_associated_diseases: MyText
+  current_weight: 9.99
+  percentage_of_lost_weight: 9.99
+  duration_of_surgery: 1

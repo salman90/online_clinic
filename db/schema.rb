@@ -10,7 +10,91 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181127232521) do
+ActiveRecord::Schema.define(version: 20181201230307) do
+
+  create_table "checkups", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "middle_name"
+    t.integer  "file_number"
+    t.integer  "age"
+    t.decimal  "weight_before_surgery"
+    t.decimal  "height"
+    t.decimal  "body_mass_before_surgery"
+    t.integer  "classification_of_body_mass"
+    t.decimal  "perfect_weight"
+    t.decimal  "extra_weight"
+    t.string   "type_of_surgery"
+    t.text     "associated_diseases"
+    t.text     "change_in_associated_diseases"
+    t.decimal  "current_weight"
+    t.decimal  "percentage_of_lost_weight"
+    t.integer  "duration_of_surgery"
+    t.integer  "user_id"
+    t.datetime "created_at",                                      null: false
+    t.datetime "updated_at",                                      null: false
+    t.string   "sex"
+    t.string   "married"
+    t.string   "children"
+    t.string   "work"
+    t.string   "pregnancy"
+    t.string   "use_of_vitamins"
+    t.string   "forgetfulness"
+    t.string   "anxiety"
+    t.string   "skin"
+    t.string   "nails"
+    t.string   "hair_loss"
+    t.string   "sagging"
+    t.string   "cosmetic_surgery"
+    t.string   "nausea"
+    t.string   "resurrection"
+    t.string   "dizziness"
+    t.string   "Cholecystectomy"
+    t.string   "reproduction_after_operation"
+    t.string   "regrets_the_surgery"
+    t.string   "recommended"
+    t.text     "notes"
+    t.string   "blood_pressure_before_surgery"
+    t.string   "blood_pressure_after_surgery"
+    t.string   "diabetes_before_surgery"
+    t.string   "diabetes_after_surgery"
+    t.string   "arthritis_before_surgery"
+    t.string   "arthritis_after_surgery"
+    t.string   "sleep_apnea_before_surgery"
+    t.string   "sleep_apnea_after_surgery"
+    t.string   "asthma_before_surgery"
+    t.string   "asthma_after_surgery"
+    t.string   "thyroid_disorders_before_surgery"
+    t.string   "thyroid_disorders_after_surgery"
+    t.string   "increase_in_body_fat_before_surgery"
+    t.string   "increase_in_body_fat_after_surgery"
+    t.string   "psychological_disorders_before_surgery"
+    t.string   "psychological_disorders_after_surgery"
+    t.string   "lack_of_fertility_before_surgery"
+    t.string   "lack_of_fertility_after_surgery"
+    t.string   "varicose_inferior_varicose_veins_before_surgery"
+    t.string   "varicose_inferior_varicose_veins_after_surgery"
+    t.string   "incontinence_before_surgery"
+    t.string   "incontinence_after_surgery"
+    t.string   "menstruation_before_surgery"
+    t.string   "menstruation_after_surgery"
+    t.string   "polycystic_ovaries_before_surgery"
+    t.string   "polycystic_ovaries_after_surgery"
+    t.string   "smoking_before_surgery"
+    t.string   "smoking_after_surgery"
+    t.string   "disturbances_before_surgery"
+    t.string   "disturbances_after_surgery"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "checkup_id"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["checkup_id"], name: "index_comments_on_checkup_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

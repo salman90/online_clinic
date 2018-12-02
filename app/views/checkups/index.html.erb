@@ -1,0 +1,8 @@
+<h3>all checkups</h3>
+
+<% @checkups.each do |checkup|  %>
+  <% if checkup.user_id === current_user.id %>
+    <p><%= checkup.first_name %></p>
+    <p><%= link_to checkup.created_at, checkup_path(checkup) %></p>
+  <% end %>
+<% end %>
