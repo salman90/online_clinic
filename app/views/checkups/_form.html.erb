@@ -1,244 +1,672 @@
-<%= form_for(@checkup) do |f| %>
- <%= f.label :first_name %>
- <%= f.text_field :first_name %><br>
- <%= f.label :middle_name %>
- <%= f.text_field :middle_name  %><br>
- <%= f.label :last_name %>
- <%= f.text_field :last_name %><br>
- <%= f.label :sex %>
- <%= f.select(:sex, options_for_select([[I18n.t('helpers.model.select_attr.values.male', 'male')], [I18n.t('helpers.model.select_attr.values.female', 'female')]])) %><br>
- <%= f.label :age %>
- <%= f.number_field(:age, step: 1) %><br>
- <%= f.label :file_number %>
- <%= f.text_field :file_number  %><br>
- <%= f.label :married %>
- <%= f.select(:married, options_for_select([[I18n.t('helpers.model.select_attr.values.y', 'Yes')], [I18n.t('helpers.model.select_attr.values.n', 'No')]])) %><br>
- <%= f.label :children %>
- <%= f.select(:children, options_for_select([[I18n.t('helpers.model.select_attr.values.y', 'Yes')],
- [I18n.t('helpers.model.select_attr.values.n', 'No')],
- [I18n.t('helpers.model.select_attr.values.1yr infertility', '1yr infertility')],
- [I18n.t('helpers.model.select_attr.values.2yr infertility', '2yr infertility')]])) %><br>
- <%= f.label :work %>
- <%= f.select(:work, options_for_select([[I18n.t('helpers.model.select_attr.values.y', 'Yes')],
- [I18n.t('helpers.model.select_attr.values.n', 'No')], [I18n.t('helpers.model.select_attr.values.student', 'student')]])) %><br>
- <%= f.label :weight_before_surgery %>
- <%= f.number_field(:weight_before_surgery, step: 0.5) %><br>
- <%= f.label :height %>
- <%= f.number_field(:height, step: 1) %><br>
- <%= f.label :body_mass_before_surgery %>
- <%= f.number_field(:body_mass_before_surgery, step: 0.5) %><br>
- <%= f.label :classification_of_body_mass %>
- <%= f.number_field(:classification_of_body_mass, step: 1) %><br>
- <%= f.label :perfect_weight %>
- <%= f.number_field(:perfect_weight, step: 0.5) %><br>
- <%= f.label :extra_weight %>
- <%= f.number_field(:extra_weight, step: 0.5) %><br>
- <%= f.label :type_of_surgery %>
- <%= f.text_field :type_of_surgery %><br>
- <%= f.label :associated_diseases %>
- <%= f.text_area :associated_diseases %><br>
- <%= f.label :change_in_associated_diseases %>
- <%= f.text_area :change_in_associated_diseases %><br>
- <%= f.label :blood_pressure_before_surgery %>
- <%= f.select(:blood_pressure_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']])) %><br>
- <%= f.label :blood_pressure_after_surgery %>
- <%= f.select(:blood_pressure_after_surgery, options_for_select(
-   [
-   ['A', 'A'],
-   ['R', 'R'],
-   ['I', 'I'],
-   ['U', 'U']
-   ])) %><br>
- <%= f.label :diabetes_before_surgery %>
- <%= f.select(:diabetes_before_surgery, options_for_select([['y', 'yes'], ['n', 'no']])) %><br>
- <%= f.label :diabetes_after_surgery %>
- <%= f.select(:diabetes_after_surgery, options_for_select(
-   [
-   ['A', 'A'],
-   ['R', 'R'],
-   ['I', 'I'],
-   ['U', 'U']
-   ]
-   )) %><br>
- <%= f.label :arthritis_before_surgery %>
- <%= f.select(:arthritis_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']])) %><br>
- <%= f.label :arthritis_after_surgery %>
- <%= f.select(:arthritis_after_surgery, options_for_select([
-   ['A', 'A'],
-   ['R', 'R'],
-   ['I', 'I'],
-   ['U', 'U']
-   ])) %><br>
- <%= f.label :sleep_apnea_before_surgery %>
- <%= f.select(:sleep_apnea_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']]) ) %><br>
- <%= f.label :sleep_apnea_after_surgery %>
- <%= f.select(:sleep_apnea_after_surgery, options_for_select([
-   ['A', 'A'],
-   ['R', 'R'],
-   ['I', 'I'],
-   ['U', 'U']
-   ])) %><br>
- <%= f.label  :asthma_before_surgery %>
- <%= f.select(:asthma_before_surgery,  options_for_select([['y', 'Yes'], ['n', 'No']])) %><br>
- <%= f.label  :asthma_after_surgery %>
- <%= f.select(:asthma_after_surgery,  options_for_select([
-   ['A', 'A'],
-   ['R', 'R'],
-   ['I', 'I'],
-   ['U', 'U']
-   ])) %><br>
- <%= f.label :thyroid_disorders_before_surgery %>
- <%= f.select(:thyroid_disorders_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']])) %><br>
+<div
+ class='formContianer'
+>
+    <%= form_for(@checkup) do |f| %>
+  <div class="form-row" id='nameRow'>
+    <div class="col-md-4" id='firstName'>
+     <%= f.label :first_name %>
+     <%= f.text_field :first_name, class: 'form-control' %>
+   </div>
+   <div class="col-md-4"
+     id='middleName'
+   >
+      <%= f.label :middle_name %>
+      <%= f.text_field :middle_name,
+        class: 'form-control'  %>
+   </div>
+    <div class="col-md-4">
+       <%= f.label :last_name %>
+       <%= f.text_field :last_name,
+        class: 'form-control'
+        %>
+     </div>
+  </div>
 
- <%= f.label :thyroid_disorders_after_surgery %>
- <%= f.select(:thyroid_disorders_after_surgery, options_for_select([
-   ['A', 'A'],
-   ['R', 'R'],
-   ['I', 'I'],
-   ['U', 'U']
-   ])) %><br>
+  <div
+   class='form-row'
+   >
+    <div
+     class='col-md-4'
+     id='sexField'
+    >
+       <%= f.label :sex %>
+       <%= f.select(:sex, options_for_select([[I18n.t('helpers.model.select_attr.values.male', 'male')], [I18n.t('helpers.model.select_attr.values.female', 'female')]]),
+       {},{:class => "form-control"}) %><br>
+    </div>
+    <div
+     class='col-md-4'
+     id='ageField'
+    >
+     <%= f.label :age %>
+     <%= f.number_field(:age, step: 1, class: 'form-control') %><br>
+   </div>
+   <div
+    class="col-md-4"
+    id='fileNumberField'
+   >
+     <%= f.label :file_number %>
+     <%= f.text_field :file_number, class: 'form-control' %><br>
+   </div>
+  </div>
+  <div
+   class='form-row'
+   >
+    <div
+     class='col-md-4'
+     id='marriedField'
+    >
+     <%= f.label :married %>
+     <%= f.select(:married, options_for_select([[I18n.t('helpers.model.select_attr.values.y', 'Yes')], [I18n.t('helpers.model.select_attr.values.n', 'No')]]), {}, { :class => 'form-control'}) %>
+   </div>
+   <div
+    class='col-md-4'
+    id='childField'
+   >
+     <%= f.label :children %>
+     <%= f.select(:children, options_for_select([[I18n.t('helpers.model.select_attr.values.y', 'Yes')],
+     [I18n.t('helpers.model.select_attr.values.n', 'No')],
+     [I18n.t('helpers.model.select_attr.values.1yr infertility', '1yr infertility')],
+     [I18n.t('helpers.model.select_attr.values.2yr infertility', '2yr infertility')]]), {},
 
- <%= f.label :increase_in_body_fat_before_surgery %>
- <%= f.select(:increase_in_body_fat_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']])) %><br>
- <%= f.label :increase_in_body_fat_after_surgery %>
- <%= f.select(:increase_in_body_fat_after_surgery, options_for_select([
-   ['A', 'A'],
-   ['R', 'R'],
-   ['I', 'I'],
-   ['U', 'U']
-   ])) %><br>
- <%= f.label :psychological_disorders_before_surgery %>
- <%= f.select(:psychological_disorders_before_surgery,  options_for_select([['y', 'Yes'], ['n', 'No']]) ) %><br>
- <%= f.label :psychological_disorders_after_surgery %>
- <%= f.select(:psychological_disorders_after_surgery, options_for_select([
-   ['A', 'A'],
-   ['R', 'R'],
-   ['I', 'I'],
-   ['U', 'U']
-   ]) ) %><br>
+     {:class => 'form-control'}) %><br>
+  </div>
+  <div
+   class='col-md-4'
+   >
+     <%= f.label :work %>
+     <%= f.select(:work, options_for_select([[I18n.t('helpers.model.select_attr.values.y', 'Yes')],
+     [I18n.t('helpers.model.select_attr.values.n', 'No')], [I18n.t('helpers.model.select_attr.values.student', 'student')]]), {},
+     {:class =>  'form-control'}
+     ) %><br>
+   </div>
+ </div>
+ <div
+ class='form-row'
+ >
+   <div
+    class='col-md-4'
+    id='weightBeforeField'
+   >
+     <%= f.label :weight_before_surgery %>
+     <%= f.number_field(:weight_before_surgery, step: 0.5,
+       class: 'form-control' ) %><br>
+   </div>
+   <div
+    class='col-md-4'
+    id='height'
+   >
+     <%= f.label :height %>
+     <%= f.number_field(:height, step: 1,
+       class: 'form-control') %><br>
+   </div>
 
- <%= f.label :lack_of_fertility_before_surgery %>
- <%= f.select(:lack_of_fertility_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']])) %><br>
+   <div
+    class='col-md-4'
+   >
+     <%= f.label :body_mass_before_surgery %>
+     <%= f.number_field(
+       :body_mass_before_surgery,
+       step: 0.5,
+       class: 'form-control'
+       ) %><br>
+   </div>
 
- <%= f.label :lack_of_fertility_after_surgery %>
- <%= f.select(:lack_of_fertility_after_surgery, options_for_select([
-   ['A', 'A'],
-   ['R', 'R'],
-   ['I', 'I'],
-   ['U', 'U']
-   ])) %><br>
+</div>
 
-   <%= f.label :varicose_inferior_varicose_veins_before_surgery %>
-   <%= f.select(:varicose_inferior_varicose_veins_before_surgery , options_for_select([['y', 'Yes'], ['n', 'No']])) %><br>
+<div
+ class="form-row"
+>
+ <div
+  class='col-md-4'
+  id='classOfBodyMass'
+ >
+     <%= f.label :classification_of_body_mass %>
+     <%= f.number_field(:classification_of_body_mass, step: 1, class: 'form-control') %><br>
+  </div>
+  <div
+   class='col-md-4'
+   id='perfectWeight'
+  >
+     <%= f.label :perfect_weight %>
+     <%= f.number_field(:perfect_weight, step: 0.5, class: 'form-control') %><br>
+  </div>
+  <div
+   class='col-md-4'
+  >
+     <%= f.label :extra_weight %>
+     <%= f.number_field(:extra_weight, step: 0.5,
+       class: 'form-control') %><br>
+  </div>
+</div>
 
-   <%= f.label :varicose_inferior_varicose_veins_after_surgery %>
-   <%= f.select(:varicose_inferior_varicose_veins_after_surgery , options_for_select([
-     ['A', 'A'],
-     ['R', 'R'],
-     ['I', 'I'],
-     ['U', 'U']
-     ])) %><br>
-  <%= f.label :incontinence_before_surgery %>
-  <%= f.select(:incontinence_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']])) %><br>
-  <%= f.label :incontinence_after_surgery %>
-  <%= f.select(:incontinence_after_surgery, options_for_select([
-    ['A', 'A'],
-    ['R', 'R'],
-    ['I', 'I'],
-    ['U', 'U']
-    ])) %><br>
-  <%=  f.label :menstruation_before_surgery %>
-  <%= f.select(:menstruation_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']])) %><br>
-  <%= f.label :menstruation_after_surgery %>
-  <%= f.select(:menstruation_after_surgery, options_for_select([
-    ['A', 'A'],
-    ['R', 'R'],
-    ['I', 'I'],
-    ['U', 'U']
-    ])) %><br>
-  <%= f.label :polycystic_ovaries_before_surgery %>
-  <%= f.select(:polycystic_ovaries_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']])) %><br>
-  <%= f.label :polycystic_ovaries_after_surgery %>
-  <%= f.select(:polycystic_ovaries_after_surgery, options_for_select([
-    ['A', 'A'],
-    ['R', 'R'],
-    ['I', 'I'],
-    ['U', 'U']
-    ])) %><br>
- <%= f.label :smoking_before_surgery %>
- <%= f.select(:smoking_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']])) %><br>
- <%= f.label :smoking_after_surgery %>
- <%= f.select(:smoking_after_surgery, options_for_select([
-   ['A', 'A'],
-   ['R', 'R'],
-   ['I', 'I'],
-   ['U', 'U']
-   ])) %><br>
- <%= f.label :disturbances_before_surgery %>
- <%= f.select(:disturbances_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']])) %><br>
- <%= f.label :disturbances_after_surgery %>
- <%= f.select(:disturbances_after_surgery, options_for_select([
-   ['A', 'A'],
-   ['R', 'R'],
-   ['I', 'I'],
-   ['U', 'U']
-   ])) %><br>
- <%= f.label :current_weight %>
- <%= f.number_field(:current_weight, step: 0.5) %><br>
- <%= f.label :percentage_of_lost_weight %>
- <%= f.number_field(:percentage_of_lost_weight, step: 0.5) %><br>
- <%= f.label :duration_of_surgery %>
- <%= f.number_field(:duration_of_surgery, step: 1) %><br>
- <%= f.label :use_of_vitamins %>
- <%= f.select(:use_of_vitamins, options_for_select([[I18n.t('helpers.model.select_attr.values.regular', 'regular')], [I18n.t('helpers.model.select_attr.values.irregular', 'irregular')], [
-   I18n.t('helpers.model.select_attr.values.never', 'never')]])) %><br>
- <%= f.label :forgetfulness %>
- <%= f.select(:forgetfulness, options_for_select([[I18n.t('helpers.model.select_attr.values.more', 'more')], [I18n.t('helpers.model.select_attr.values.less', 'less')], [I18n.t('helpers.model.select_attr.values.same', 'same')]])) %><br>
- <%= f.label :anxiety %>
- <%= f.select(:anxiety, options_for_select([[I18n.t('helpers.model.select_attr.values.more', 'more')], [I18n.t('helpers.model.select_attr.values.less', 'less')], [I18n.t('helpers.model.select_attr.values.same', 'same')]])) %><br>
- <%= f.label :skin %>
- <%= f.select(:skin, options_for_select([[I18n.t('helpers.model.select_attr.values.dried', 'dried')], [I18n.t('helpers.model.select_attr.values.improved', 'improved')], [I18n.t('helpers.model.select_attr.values.nothing changed', 'nothing changed')]]))%><br>
- <%= f.label :nails %>
- <%= f.select(:nails, options_for_select([[I18n.t('helpers.model.select_attr.values.Nail loss', 'Nail loss')], [I18n.t('helpers.model.select_attr.values.nothing changed', 'nothing changed')]]))%><br>
- <%= f.label :hair_loss %>
- <%= f.select(:hair_loss, options_for_select([[I18n.t('helpers.model.select_attr.values.never', 'never')], [I18n.t('helpers.model.select_attr.values.light', 'light')], [I18n.t('helpers.model.select_attr.values.heavy', 'heavy')], [I18n.t('helpers.model.select_attr.values.average', 'average')]])) %><br>
- <%= f.label :sagging %>
- <%= f.select(:sagging, options_for_select([[I18n.t('helpers.model.select_attr.values.non existent', 'non existent')], [I18n.t('helpers.model.select_attr.values.light', 'light')], [I18n.t('helpers.model.select_attr.values.heavy', 'heavy')], [I18n.t('helpers.model.select_attr.values.average', 'average')]])) %><br>
+<div
+class='form-row'
+>
+  <div
+   class='col-md-4'
+   id='typeOfSur'
+  >
+     <%= f.label :type_of_surgery %>
+     <%= f.text_field :type_of_surgery, class: 'form-control' %><br>
+  </div>
+  <div
+  class='col-md-4'
+  id='assDiseases'
+  >
+     <%= f.label :associated_diseases %>
+     <%= f.text_area :associated_diseases,
+     class: 'form-control' %><br>
+  </div>
+  <div
+   class='col-md-4'
+   id='changeInDiseases'
+  >
+     <%= f.label :change_in_associated_diseases %>
+     <%= f.text_area :change_in_associated_diseases,
+     class: 'form-control' %><br>
+  </div>
+</div>
+<div
+class='form-row'
+>
+  <div
+   class="col-md-6"
+   id='bloodPressureBefore'
+  >
+     <%= f.label :blood_pressure_before_surgery %>
+     <%= f.select(:blood_pressure_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']]), {},
+      { :class => 'form-control'}
+     ) %><br>
+  </div>
+  <div
+   class='col-md-6'
+  >
+     <%= f.label :blood_pressure_after_surgery %>
+     <%= f.select(:blood_pressure_after_surgery, options_for_select(
+       [
+       ['A', 'A'],
+       ['R', 'R'],
+       ['I', 'I'],
+       ['U', 'U']
+       ]), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+ class="form-row"
+>
+  <div
+   class="col-md-6"
+   id='diabetesBefore'
+  >
+     <%= f.label :diabetes_before_surgery %>
+     <%= f.select(:diabetes_before_surgery, options_for_select([['y', 'yes'], ['n', 'no']]), {},
+      {:class => 'form-control'}
+     ) %><br>
+  </div>
+  <div
+   class="col-md-6"
+  >
+     <%= f.label :diabetes_after_surgery %>
+     <%= f.select(:diabetes_after_surgery, options_for_select(
+       [
+       ['A', 'A'],
+       ['R', 'R'],
+       ['I', 'I'],
+       ['U', 'U']
+       ]
+       ), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+class="form-row"
+>
+  <div
+   class="col-md-6"
+   id='arthritisBefore'
+  >
+     <%= f.label :arthritis_before_surgery %>
+     <%= f.select(:arthritis_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']]),{}, {:class => 'form-control'}) %><br>
+  </div>
+  <div
+   class="col-md-6"
+  >
+     <%= f.label :arthritis_after_surgery %>
+     <%= f.select(:arthritis_after_surgery, options_for_select([
+       ['A', 'A'],
+       ['R', 'R'],
+       ['I', 'I'],
+       ['U', 'U']
+       ]), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+class='form-row'
+>
+  <div
+   class='col-md-6'
+   id='sleepApneaBefore'
+  >
+     <%= f.label :sleep_apnea_before_surgery %>
+     <%= f.select(:sleep_apnea_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']]), {}, {:class => 'form-control'}) %><br>
+  </div>
+  <div
+   class='col-md-6'
+  >
+     <%= f.label :sleep_apnea_after_surgery %>
+     <%= f.select(:sleep_apnea_after_surgery, options_for_select([
+       ['A', 'A'],
+       ['R', 'R'],
+       ['I', 'I'],
+       ['U', 'U']
+       ]), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+class='form-row'
+>
+  <div
+   class='col-md-6'
+   id='asthmaBefore'
+  >
+     <%= f.label  :asthma_before_surgery %>
+     <%= f.select(:asthma_before_surgery,  options_for_select([['y', 'Yes'], ['n', 'No']]), {},
+     { :class => 'form-control'}) %><br>
+  </div>
+   <div
+    class='col-md-6'
+   >
+     <%= f.label  :asthma_after_surgery %>
+     <%= f.select(:asthma_after_surgery,  options_for_select([
+       ['A', 'A'],
+       ['R', 'R'],
+       ['I', 'I'],
+       ['U', 'U']
+       ]), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+ class='from-row'
+>
+  <div
+   class='col-md-6'
+   id='thyroidDisorders'
+  >
+     <%= f.label :thyroid_disorders_before_surgery %>
+     <%= f.select(:thyroid_disorders_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']]), {},
+     { :class => 'form-control'}) %><br>
+  </div>
+  <div
+   class="col-md-6"
+  >
+     <%= f.label :thyroid_disorders_after_surgery %>
+     <%= f.select(:thyroid_disorders_after_surgery, options_for_select([
+       ['A', 'A'],
+       ['R', 'R'],
+       ['I', 'I'],
+       ['U', 'U']
+       ]), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+ class="form-row"
+>
+ <div
+  class="col-md-6"
+  id='increaseInBody'
+ >
+     <%= f.label :increase_in_body_fat_before_surgery %>
+     <%= f.select(:increase_in_body_fat_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']]), {},
+       { :class => 'form-control'}
+     ) %><br>
+</div>
+<div
+ class="col-md-6"
+>
+     <%= f.label :increase_in_body_fat_after_surgery %>
+     <%= f.select(:increase_in_body_fat_after_surgery, options_for_select([
+       ['A', 'A'],
+       ['R', 'R'],
+       ['I', 'I'],
+       ['U', 'U']
+       ]), {}, {class: 'form-control'}) %><br>
+  </div>
+</div>
+<div
+ class="form-row"
+>
+  <div
+   class="col-md-6"
+   id='psychologicalDisorders'
+  >
+     <%= f.label :psychological_disorders_before_surgery %>
+     <%= f.select(:psychological_disorders_before_surgery,  options_for_select([['y', 'Yes'], ['n', 'No']]), {}, { :class => 'form-control'}) %><br>
+  </div>
+  <div
+   class='col-md-6'
+  >
+     <%= f.label :psychological_disorders_after_surgery %>
+     <%= f.select(:psychological_disorders_after_surgery, options_for_select([
+       ['A', 'A'],
+       ['R', 'R'],
+       ['I', 'I'],
+       ['U', 'U']
+       ]), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
 
- <%= f.label :cosmetic_surgery %>
- <%= f.select(:cosmetic_surgery, options_for_select([[I18n.t('helpers.model.select_attr.values.never', 'never')], [I18n.t('helpers.model.select_attr.values.did', 'did')], [I18n.t('helpers.model.select_attr.values.in the future', 'in the future')]])) %><br>
+<div
+class="form-row"
+>
+  <div
+   class='col-md-6'
+   id='lackOfFertility'
+  >
+     <%= f.label :lack_of_fertility_before_surgery %>
+     <%= f.select(:lack_of_fertility_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']]), {},
+     { :class => 'form-control'}
+     ) %><br>
+  </div>
 
- <%= f.label :nausea %>
- <%= f.select(:nausea, options_for_select([[I18n.t('helpers.model.select_attr.values.sometimes', 'sometimes')], [I18n.t('helpers.model.select_attr.values.never', 'never')], [I18n.t('helpers.model.select_attr.values.always', 'always')]])) %><br>
+  <div
+   class='col-md-6'
+   >
+     <%= f.label :lack_of_fertility_after_surgery %>
+     <%= f.select(:lack_of_fertility_after_surgery, options_for_select([
+       ['A', 'A'],
+       ['R', 'R'],
+       ['I', 'I'],
+       ['U', 'U']
+       ]),{}, {:class => 'form-control' }) %><br>
+    </div>
 
- <%= f.label :resurrection %>
- <%= f.select(:resurrection, options_for_select([[I18n.t('helpers.model.select_attr.values.sometimes', 'sometimes')], [I18n.t('helpers.model.select_attr.values.never', 'never')], [I18n.t('helpers.model.select_attr.values.always', 'always')]])) %><br>
+</div>
 
- <%= f.label :dizziness %>
- <%= f.select(:dizziness, options_for_select([
-   [I18n.t('helpers.model.select_attr.values.sometimes', 'sometimes')], [I18n.t('helpers.model.select_attr.values.never', 'never')], [I18n.t('helpers.model.select_attr.values.always', 'always')]])) %><br>
+<div
+class='form-row'
+>
+  <div
+  class='col-md-6'
+  id='varicoseInferior'
+  >
+       <%= f.label :varicose_inferior_varicose_veins_before_surgery %>
+       <%= f.select(:varicose_inferior_varicose_veins_before_surgery , options_for_select([['y', 'Yes'], ['n', 'No']]), {}, {:class => 'form-control'}) %><br>
+  </div>
+  <div
+   class='col-md-6'
+  >
+       <%= f.label :varicose_inferior_varicose_veins_after_surgery %>
+       <%= f.select(:varicose_inferior_varicose_veins_after_surgery , options_for_select([
+         ['A', 'A'],
+         ['R', 'R'],
+         ['I', 'I'],
+         ['U', 'U']
+         ]), {}, {:class => 'form-control'}) %><br>
+    </div>
+</div>
+<div
+class="form-row"
+>
+    <div
+     class='col-md-6'
+     id='incontinenceBefore'
+    >
+      <%= f.label :incontinence_before_surgery %>
+      <%= f.select(:incontinence_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']]), {}, {:class => 'form-control'}) %><br>
+    </div>
+    <div
+     class="col-md-6"
+    >
+      <%= f.label :incontinence_after_surgery %>
+      <%= f.select(:incontinence_after_surgery, options_for_select([
+        ['A', 'A'],
+        ['R', 'R'],
+        ['I', 'I'],
+        ['U', 'U']
+        ]), {}, {:class => 'form-control'}) %><br>
+    </div>
+</div>
+<div
+class="form-row"
+>
+ <div
+  class="col-md-6"
+  id='menstruationBefore'
+ >
+      <%=  f.label :menstruation_before_surgery %>
+      <%= f.select(:menstruation_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']]), {}, {:class => 'form-control'}) %><br>
+ </div>
+ <div
+ class="col-md-6"
+ >
+      <%= f.label :menstruation_after_surgery %>
+      <%= f.select(:menstruation_after_surgery, options_for_select([
+        ['A', 'A'],
+        ['R', 'R'],
+        ['I', 'I'],
+        ['U', 'U']
+        ]), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+class="form-row"
+>
+  <div
+   class="col-md-6"
+   id='polycysticOvaries'
+  >
+    <%= f.label :polycystic_ovaries_before_surgery %>
+    <%= f.select(:polycystic_ovaries_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']]), {}, {:class => 'form-control'}) %><br>
+  </div>
+  <div
+  class="col-md-6"
+  >
+      <%= f.label :polycystic_ovaries_after_surgery %>
+      <%= f.select(:polycystic_ovaries_after_surgery, options_for_select([
+        ['A', 'A'],
+        ['R', 'R'],
+        ['I', 'I'],
+        ['U', 'U']
+        ]), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+class="form-row"
+>
+ <div
+  class="col-md-6"
+  id='smokingBefore'
+ >
+     <%= f.label :smoking_before_surgery %>
+     <%= f.select(:smoking_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']]),{}, {:class => 'form-control'}) %><br>
+</div>
+ <div
+  class="col-md-6"
+ >
+     <%= f.label :smoking_after_surgery %>
+     <%= f.select(:smoking_after_surgery, options_for_select([
+       ['A', 'A'],
+       ['R', 'R'],
+       ['I', 'I'],
+       ['U', 'U']
+       ]), {}, {:class => 'form-control'}) %><br>
+ </div>
+</div>
+<div
+ class="form-row"
+>
+ <div
+  class="col-md-6"
+  id='disturbancesBefore'
+ >
+     <%= f.label :disturbances_before_surgery %>
+     <%= f.select(:disturbances_before_surgery, options_for_select([['y', 'Yes'], ['n', 'No']]), {}, {:class => 'form-control'}) %><br>
+</div>
+<div
+ class="col-md-6"
+>
+     <%= f.label :disturbances_after_surgery %>
+     <%= f.select(:disturbances_after_surgery, options_for_select([
+       ['A', 'A'],
+       ['R', 'R'],
+       ['I', 'I'],
+       ['U', 'U']
+       ]), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+ class="form-row"
+>
+ <div
+  class="col-md-4"
+ >
+     <%= f.label :current_weight %>
+     <%= f.number_field(:current_weight, step: 0.5,
+       class: 'form-control') %><br>
+</div>
+  <div
+   class="col-md-4"
+  >
+     <%= f.label :percentage_of_lost_weight %>
+     <%= f.number_field(:percentage_of_lost_weight,
+       step: 0.5, class: 'form-control') %><br>
+  </div>
+  <div
+   class="col-md-4"
+  >
+     <%= f.label :duration_of_surgery %>
+     <%= f.number_field(
+       :duration_of_surgery,
+       step: 1,
+       class: 'form-control'
+       ) %><br>
+  </div>
+</div>
+<div
+ class="form-row"
+>
+ <div
+  class="col-md-4"
+  id='useOfVitamins'
+ >
+     <%= f.label :use_of_vitamins %>
+     <%= f.select(:use_of_vitamins, options_for_select([[I18n.t('helpers.model.select_attr.values.regular', 'regular')], [I18n.t('helpers.model.select_attr.values.irregular', 'irregular')], [
+       I18n.t('helpers.model.select_attr.values.never', 'never')]]), {}, {:class => 'form-control'}) %><br>
+  </div>
+  <div
+   class="col-md-4"
+   id='forgetfulness'
+  >
+     <%= f.label :forgetfulness %>
+     <%= f.select(:forgetfulness, options_for_select([[I18n.t('helpers.model.select_attr.values.more', 'more')], [I18n.t('helpers.model.select_attr.values.less', 'less')], [I18n.t('helpers.model.select_attr.values.same', 'same')]]), {}, {:class => 'form-control'}) %><br>
+  </div>
+  <div
+   class="col-md-4"
+  >
+     <%= f.label :anxiety %>
+     <%= f.select(:anxiety, options_for_select([[I18n.t('helpers.model.select_attr.values.more', 'more')], [I18n.t('helpers.model.select_attr.values.less', 'less')], [I18n.t('helpers.model.select_attr.values.same', 'same')]]), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+class="form-row"
+>
+ <div
+   class="col-md-4"
+   id='skin'
+ >
+     <%= f.label :skin %>
+     <%= f.select(:skin, options_for_select([[I18n.t('helpers.model.select_attr.values.dried', 'dried')], [I18n.t('helpers.model.select_attr.values.improved', 'improved')], [I18n.t('helpers.model.select_attr.values.nothing changed', 'nothing changed')]]), {}, {:class => 'form-control'})%><br>
+ </div>
+ <div
+   class="col-md-4"
+   id='nails'
+ >
+     <%= f.label :nails %>
+     <%= f.select(:nails, options_for_select([[I18n.t('helpers.model.select_attr.values.Nail loss', 'Nail loss')], [I18n.t('helpers.model.select_attr.values.nothing changed', 'nothing changed')]]), {}, {:class => 'form-control'})%><br>
+</div>
+<div
+  class="col-md-4"
+>
+     <%= f.label :hair_loss %>
+     <%= f.select(:hair_loss, options_for_select([[I18n.t('helpers.model.select_attr.values.never', 'never')], [I18n.t('helpers.model.select_attr.values.light', 'light')], [I18n.t('helpers.model.select_attr.values.heavy', 'heavy')], [I18n.t('helpers.model.select_attr.values.average', 'average')]]), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+class="form-row"
+>
+   <div
+    class="col-md-4"
+   >
+     <%= f.label :sagging %>
+     <%= f.select(:sagging, options_for_select([[I18n.t('helpers.model.select_attr.values.non existent', 'non existent')], [I18n.t('helpers.model.select_attr.values.light', 'light')], [I18n.t('helpers.model.select_attr.values.heavy', 'heavy')], [I18n.t('helpers.model.select_attr.values.average', 'average')]]), {}, {:class => 'form-control'}) %><br>
+  </div>
+  <div
+   class="col-md-4"
+  >
+     <%= f.label :cosmetic_surgery %>
+     <%= f.select(:cosmetic_surgery, options_for_select([[I18n.t('helpers.model.select_attr.values.never', 'never')], [I18n.t('helpers.model.select_attr.values.did', 'did')], [I18n.t('helpers.model.select_attr.values.in the future', 'in the future')]]), {}, {:class => 'form-control'}) %><br>
+  </div>
+  <div
+   class="col-md-4"
+  >
+     <%= f.label :nausea %>
+     <%= f.select(:nausea, options_for_select([[I18n.t('helpers.model.select_attr.values.sometimes', 'sometimes')], [I18n.t('helpers.model.select_attr.values.never', 'never')], [I18n.t('helpers.model.select_attr.values.always', 'always')]]),{}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+class="form-row"
+>
+  <div
+   class="col-md-4"
+  >
+     <%= f.label :resurrection %>
+     <%= f.select(:resurrection, options_for_select([[I18n.t('helpers.model.select_attr.values.sometimes', 'sometimes')], [I18n.t('helpers.model.select_attr.values.never', 'never')], [I18n.t('helpers.model.select_attr.values.always', 'always')]]), {}, {:class => 'form-control'}) %><br>
+  </div>
+  <div
+   class="col-md-4"
+  >
+     <%= f.label :dizziness %>
+     <%= f.select(:dizziness, options_for_select([
+       [I18n.t('helpers.model.select_attr.values.sometimes', 'sometimes')], [I18n.t('helpers.model.select_attr.values.never', 'never')], [I18n.t('helpers.model.select_attr.values.always', 'always')]]), {}, {:class => 'form-control'}) %><br>
+  </div>
+  <div
+   class="col-md-4"
+  >
+     <%= f.label :Cholecystectomy %>
+     <%= f.select(:Cholecystectomy, options_for_select([[I18n.t('helpers.model.select_attr.values.with the surgery', 'with the surgery')], [I18n.t('helpers.model.select_attr.values.after the surgery', 'after the surgery')], [ I18n.t('helpers.model.select_attr.values.before the surgery', 'before the surgery') ], ["didn't", "didn't"]]), {}, {:class => 'form-control'}) %><br>
+  </div>
+</div>
+<div
+ class='form-row'
+>
+ <div
+  class="col-md-4"
+ >
+     <%= f.label  :reproduction_after_operation %>
+    <%= f.select(:reproduction_after_operation, options_for_select(
+      [
+        [I18n.t("helpers.model.select_attr.values.haven't changed", "haven't changed")], [I18n.t("helpers.model.select_attr.values.postive effect", "postive effect")], [I18n.t("helpers.model.select_attr.values.negative effect", "negative effect")]
+      ]
+        ), {}, {:class => 'form-control'}) %><br>
+   </div>
+   <div
+    class="col-md-4"
+   >
+     <%= f.label :regrets_the_surgery %>
+     <%= f.select(:regrets_the_surgery, options_for_select(
+       [
+        [I18n.t("helpers.model.select_attr.values.y", "yes")],
+       [I18n.t('helpers.model.select_attr.values.n', 'no')]
+       ]
+       ), {}, {:class => 'form-control'}) %><br>
+   </div>
+   <div
+    class="col-md-4"
+   >
+     <%= f.label :recommended  %>
+     <%= f.select(:recommended, options_for_select([[I18n.t('helpers.model.select_attr.values.y', 'yes')], [I18n.t('helpers.model.select_attr.values.n', 'no')]]), {}, {:class => 'form-control'})  %><br>
+   </div>
+  </div>
+     <%= f.submit 'create', :class => 'btn btn-success' %>
 
- <%= f.label :Cholecystectomy %>
- <%= f.select(:Cholecystectomy, options_for_select([[I18n.t('helpers.model.select_attr.values.with the surgery', 'with the surgery')], [I18n.t('helpers.model.select_attr.values.after the surgery', 'after the surgery')], [ I18n.t('helpers.model.select_attr.values.before the surgery', 'before the surgery') ], ["didn't", "didn't"]])) %><br>
-
- <%= f.label  :reproduction_after_operation %>
-<%= f.select(:reproduction_after_operation, options_for_select(
-  [
-    [I18n.t("helpers.model.select_attr.values.haven't changed", "haven't changed")], [I18n.t("helpers.model.select_attr.values.postive effect", "postive effect")], [I18n.t("helpers.model.select_attr.values.negative effect", "negative effect")]
-  ]
-    )) %><br>
-
- <%= f.label :regrets_the_surgery %>
- <%= f.select(:regrets_the_surgery, options_for_select(
-   [
-    [I18n.t("helpers.model.select_attr.values.y", "yes")],
-   [I18n.t('helpers.model.select_attr.values.n', 'no')]
-   ]
-   )) %><br>
-
- <%= f.label :recommended  %>
- <%= f.select(:recommended, options_for_select([[I18n.t('helpers.model.select_attr.values.y', 'yes')], [I18n.t('helpers.model.select_attr.values.n', 'no')]]))  %><br>
-
-
- <%= f.submit %>
-<% end %>
+    <% end %>
+</div>

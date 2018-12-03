@@ -149,7 +149,7 @@
       </tr>
     </tbody>
   </table>
-  <h3>Comments</h3>
+  <h3><%= t('Comments') %></h3>
   <div>
      <%= form_for [@checkup, @comment] do |f| %>
       <%= f.text_area :body %><br>
@@ -159,7 +159,7 @@
 
   <div>
     <% @checkup.comments.each do |comment| %>
-     <p><%= comment.created_at %></p>
+     <p><%= comment.created_at.strftime("%a %b %e %T %Y") %></p>
      <p><%= comment.user.email %></p>
      <p><%= comment.body %></p>
     <% end %>

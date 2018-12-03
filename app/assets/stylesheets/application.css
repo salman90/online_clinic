@@ -19,3 +19,145 @@
 body {
   direction: rtl;
 }
+
+.formContianer{
+  direction: rtl;
+}
+
+/* #firstName {
+  float: right;
+} */
+
+#firstName {
+  float: right;
+}
+
+#middleName {
+  float: right;
+}
+
+#sexField {
+  float: right;
+}
+
+#ageField {
+  float: right;
+}
+
+#marriedField {
+  float: right;
+}
+
+#childField {
+  float: right;
+}
+
+#weightBeforeField {
+  float: right;
+}
+
+#height {
+  float: right;
+}
+
+#classOfBodyMass {
+  float: right;
+}
+
+#perfectWeight {
+  float: right;
+}
+
+#typeOfSur {
+  float: right;
+}
+
+#assDiseases{
+  float: right;
+}
+
+#changeInDiseases {
+  float: right;
+}
+
+#bloodPressureBefore {
+  float: right;
+}
+
+#diabetesBefore{
+  float: right;
+}
+
+#arthritisBefore {
+  float: right;
+}
+
+#sleepApneaBefore {
+  float: right;
+}
+#asthmaBefore {
+  float: right;
+}
+
+#thyroidDisorders{
+  float: right;
+}
+
+#increaseInBody {
+  float: right;
+}
+
+#psychologicalDisorders{
+  float: right;
+}
+
+#lackOfFertility {
+  float: right;
+}
+
+#varicoseInferior{
+  float: right;
+}
+
+#incontinenceBefore {
+  float: right;
+}
+
+#menstruationBefore {
+  float: right;
+}
+
+#polycysticOvaries {
+  float: right;
+}
+
+#smokingBefore {
+  float: right;
+}
+
+#useOfVitamins {
+  float: right;
+}
+
+#forgetfulness {
+  float: right;
+}
+
+#skin {
+  float: right;
+}
+
+#nail {
+  float: right;
+}
+#sagging {
+  float: right;
+}
+
+#cosmetic_surgery {
+  float: right;
+}
+
+#disturbancesBefore {
+  float: right;
+}

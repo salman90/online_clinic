@@ -67,6 +67,7 @@ ar:
   disturbances before surgery: 'الاضطرابات المتفرقة قبل العملية'
   disturbances after surgery: 'الاضطرابات المتفرقة بعد العملية'
   menstruation after surgery: 'الدورة الشهرية بعد العملية'
+  Comments: 'تعليقات'
   helpers:
     model:
       select_attr:
