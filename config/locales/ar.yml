@@ -68,6 +68,7 @@ ar:
   disturbances after surgery: 'الاضطرابات المتفرقة بعد العملية'
   menstruation after surgery: 'الدورة الشهرية بعد العملية'
   Comments: 'تعليقات'
+  welcome: 'مرحباً'
   helpers:
     model:
       select_attr:
@@ -83,7 +84,6 @@ ar:
           2yr infertility: 'العقم لمدة سنتان'
           student: 'طالب'
           never: 'لايوجد'
-          #need to fix this partt
           more: 'ازداد'
           less: 'نقص'
           same: 'لم يتغيير'
@@ -109,6 +109,8 @@ ar:
           negative effect: 'تأثر سلبا '
   activerecord:
     attributes:
+      user:
+        first_name: "الاسم الاول"
       checkup:
         first_name: "الاسم الاول"
         middle_name: "أسم الأب"

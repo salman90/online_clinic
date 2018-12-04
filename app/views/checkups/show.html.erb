@@ -152,16 +152,46 @@
   <h3><%= t('Comments') %></h3>
   <div>
      <%= form_for [@checkup, @comment] do |f| %>
-      <%= f.text_area :body %><br>
-     <%= f.submit %>
+      <%= f.text_area :body, class: 'form-control commentTextarea' %><br>
+     <%= f.submit 'ok', :class => 'btn btn-primary' %>
      <% end  %>
   </div>
 
-  <div>
-    <% @checkup.comments.each do |comment| %>
-     <p><%= comment.created_at.strftime("%a %b %e %T %Y") %></p>
-     <p><%= comment.user.email %></p>
-     <p><%= comment.body %></p>
-    <% end %>
+  <div
+   class="row"
+  >
+   <div
+    class="col-md-12"
+    id='commentTable'
+   >
+    <div
+     class="row"
+    >
+       <div
+        class="col-md-1"
+        id='commentTable'
+       >
+       </div>
+       <div
+        class="col-md-5"
+        id='commentTable'
+       >
+       <% @checkup.comments.each do |comment| %>
+
+       <div class="panel panel-default">
+         <div
+          class="panel-heading"
+         >
+         <strong><%= comment.user.first_name %> <%= comment.user.last_name %></strong> <span class="text-muted">commented
+           <%= comment.created_at.strftime("%a %b %e %T %Y") %></span>
+         </div>
+         <div class="panel-body">
+           <%= comment.body %>
+         </div>
+       </div>
+       <% end %>
+      </div>
+    </div>
+   </div>
   </div>
 </div>

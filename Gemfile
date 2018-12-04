@@ -39,6 +39,8 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-sass-rails-rtl'
+gem 'devise-i18n'
+
 # gem 'rtlize'
 
 

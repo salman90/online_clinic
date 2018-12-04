@@ -161,3 +161,24 @@ body {
 #disturbancesBefore {
   float: right;
 }
+
+.navbar .navbar-default {
+  float: right;
+}
+
+.navbar-brand {
+  float: right;
+}
+
+
+.navbar-collapse {
+  float: right;
+}
+
+.commentTextarea {
+  resize: none;
+}
+
+#commentTable {
+  float: right;
+}
