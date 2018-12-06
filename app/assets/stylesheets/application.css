@@ -240,6 +240,36 @@ body {
   color: #777;
 }
 
+#firstNameShow {
+  float: right;
+}
+
+#profilePic {
+  float: right;
+}
+
+#middleName {
+  float: right;
+}
+
+#checkupTable {
+  float: right;
+}
+
+#dateHead {
+  float: right;
+}
+
+.table-responsive {
+  width: 800;
+  height: 50;
+  overflow:scroll;
+}
+
+
+
+
+
 /* .button- {
   background-color: 'red'
 } */

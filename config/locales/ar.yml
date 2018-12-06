@@ -76,7 +76,7 @@ ar:
   time: 'الوقت'
   checkup: 'الفحص'
   .sign_up: 'إنشاء حساب جديد'
-  home_Title: 'عيادات الدكتور عبدالرحمن'
+  home_Title: 'عيادة الدكتور عبدالرحمن سالم'
   checkups_title: 'لا يوجد فحوصات'
   link_text:
     login: 'تسجيل الدخول'
@@ -85,9 +85,8 @@ ar:
     logout: 'الخروج'
     checkups: 'الفحوصات'
     profile: 'الملف الشخصي'
-    doctorsAp: 'عيادات الدكتور عبدالرحمن'
+    doctorsAp: 'عيادة الدكتور عبدالرحمن سالم'
     create_checkup: 'إنشاء فحص'
-
   helpers:
     submit:
       checkup:

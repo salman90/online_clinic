@@ -1,18 +1,12 @@
 <div
- class="container bootstrap snippet"
+ class="container bootstrap_snippet"
 >
-  <div class="row">
-     <div
-      class="col-md-10"
-     >
-      <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
-    </div>
-  </div>
   <div
    class="row"
   >
    <div
     class="col-md-3"
+    id="profilePic"
    >
     <div class="text-center">
       <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
@@ -28,17 +22,52 @@
      <div
       class="tab-pane active"
      >
-      <hr>
        <div
-        class="col-md-6"
+        class="col-md-4"
+        id="firstNameShow"
        >
-          <p>First Name<h4>
+          <p><%= t('first name') %><h4>
             <%= current_user.first_name %></h4></p>
        </div>
        <div
-        class="col-md-6"
+        class="col-md-4"
+        id="middleName"
        >
-         <%= link_to 'edit user', edit_user_registration_path %>
+       <p><%= t('middle name') %><h4>
+         <%= current_user.middle_name %></h4></p>
+      </div>
+      <div
+      class="col-md-4"
+      >
+      <p><%= t('last name') %><h4>
+        <%= current_user.last_name %></h4></p>
+      </div>
+      <hr>
+      <div
+       class="col-md-4"
+       id="checkupTable"
+      >
+       <table
+        class='table table-bordered'
+       >
+       <h4><%= t('All Checkups') %></h4>
+       <thead>
+          <tr>
+           <th
+            id="dateHead"
+           >
+             <%= t('date') %>
+           </th>
+          </tr>
+       </thead>
+         <tbody>
+           <% @user.checkups.each do |checkup|  %>
+             <tr>
+               <td><%= link_to checkup.created_at.strftime("%a %b %e %T %Y"), checkup_path(checkup) %></td>
+             </tr>
+          <% end %>
+        </tbody>
+      </table>
       </div>
      </div>
     </div>
