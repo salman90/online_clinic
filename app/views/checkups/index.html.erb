@@ -1,8 +1,14 @@
-<h3>all checkups</h3>
+<h3><%= t('All Checkups') %></h3>
+<% if @checkups.any? %>
+  <h4><%= t('checkups_title') %></h4>
+  <%= link_to(t('link_text.create_checkup'), new_checkup_path ) %>
+<% end %>
 
 <% @checkups.each do |checkup|  %>
   <% if checkup.user_id === current_user.id %>
-    <p><%= checkup.first_name %></p>
-    <p><%= link_to checkup.created_at, checkup_path(checkup) %></p>
+    <p><%= t('name') %> : <%= checkup.first_name %> </p>
+    <p><%= t('date') %> : <%= checkup.created_at.strftime("%a %b %e") %></p>
+    <p><%= t('time') %> : <%= checkup.created_at.strftime("%T") %></p>
+    <p><%= t('checkup') %> : <%= link_to(t('link_text.checkup'), checkup_path(checkup)) %></p>
   <% end %>
 <% end %>

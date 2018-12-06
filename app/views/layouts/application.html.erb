@@ -46,12 +46,34 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to 'DoctorsAp', root_path, class: "navbar-brand" %>
+        <%= link_to(t('link_text.doctorsAp'), root_path, class: "navbar-brand") %>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "portoflio", my_portfolio_path, class: 'portoflio-link' %></li>
-            <li><%= link_to "checkups", checkups_path, class: '' %></li>
-          </ul>
+            <ul class="nav navbar-nav">
+              <% if current_user %>
+                <li><%= link_to(t("link_text.profile"), my_portfolio_path		, class: 'portoflio-link') %></li>
+                <li><%= link_to(t("link_text.checkups"), checkups_path, class: '') %></li>
+                <li><%= link_to(t('link_text.create_checkup'), new_checkup_path) %>
+                <% if current_user.admin? %>
+                 <li><%= link_to 'users', all_profiles_path %></li>
+                <% end %>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <% if current_user.first_name.nil? %>
+                       <p><%= t('unanimous') %></p>
+                    <% else %>
+                    <%= current_user.first_name %> <%= current_user.last_name %>
+                    <% end %>
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <%= link_to(t('link_text.logout'), destroy_user_session_path , method: :delete, class: 'logout-nav') %>
+                  </div>
+                </li>
+              <% else %>
+                <li><%= link_to(t('link_text.sign_up', :sign_up => @sign_up), new_user_registration_path) %></li>
+                <li><%= link_to(t('link_text.login', :login => @login), new_user_session_path) %></li>
+
+              <% end %>
+            </ul>
         </div>
       </div>
     </div>

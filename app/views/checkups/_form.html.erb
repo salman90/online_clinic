@@ -666,7 +666,7 @@ class="form-row"
      <%= f.select(:recommended, options_for_select([[I18n.t('helpers.model.select_attr.values.y', 'yes')], [I18n.t('helpers.model.select_attr.values.n', 'no')]]), {}, {:class => 'form-control'})  %><br>
    </div>
   </div>
-     <%= f.submit 'create', :class => 'btn btn-success' %>
+     <%= f.submit t('helpers.submit.checkup.create'), :class => 'btn btn-success' %>
 
     <% end %>
 </div>

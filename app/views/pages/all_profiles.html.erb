@@ -1,0 +1,24 @@
+<div
+ class="container"
+>
+ <h3>Users</h3>
+ <table class="table">
+   <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>middle Name</th>
+        <th>checkups</th>
+      </tr>
+   </thead>
+   <tbody>
+     <% @users.each do |user|  %>
+       <tr>
+         <td><%= user.first_name %></td>
+         <td><%= user.middle_name %></td>
+         <td><%= user.last_name %></td>
+      </tr>
+     <% end %>
+  </tbody>
+</table>
+</div>

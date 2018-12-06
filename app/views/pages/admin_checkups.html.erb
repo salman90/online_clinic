@@ -1,0 +1,5 @@
+<h3>batats</h3>
+<% @user.checkups.each do |checkup| %>
+ <p><%= link_to checkup.created_at.strftime("%a %b %e %T %Y"), checkup_path(checkup) %></p>
+ 
+<% end %>

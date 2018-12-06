@@ -69,7 +69,32 @@ ar:
   menstruation after surgery: 'الدورة الشهرية بعد العملية'
   Comments: 'تعليقات'
   welcome: 'مرحباً'
+  unanimous: 'مجهول'
+  All Checkups: 'الفحوصات'
+  name: 'الأسم'
+  date: 'التاريخ'
+  time: 'الوقت'
+  checkup: 'الفحص'
+  .sign_up: 'إنشاء حساب جديد'
+  home_Title: 'عيادات الدكتور عبدالرحمن'
+  checkups_title: 'لا يوجد فحوصات'
+  link_text:
+    login: 'تسجيل الدخول'
+    sign_up: 'إنشاء حساب'
+    checkups_title: ''
+    logout: 'الخروج'
+    checkups: 'الفحوصات'
+    profile: 'الملف الشخصي'
+    doctorsAp: 'عيادات الدكتور عبدالرحمن'
+    create_checkup: 'إنشاء فحص'
+
   helpers:
+    submit:
+      checkup:
+        create: 'إنشاء فحص'
+    placeholder:
+      user:
+        first_name: ''
     model:
       select_attr:
         values:

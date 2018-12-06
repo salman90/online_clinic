@@ -1,6 +1,47 @@
-<h1
->portoflio
-</h1>
-<h1><%= t 'hello' %></h1>
-<%= @user.email %>
-<%= link_to 'Create Checkup', new_checkup_path %>
+<div
+ class="container bootstrap snippet"
+>
+  <div class="row">
+     <div
+      class="col-md-10"
+     >
+      <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+    </div>
+  </div>
+  <div
+   class="row"
+  >
+   <div
+    class="col-md-3"
+   >
+    <div class="text-center">
+      <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+      <h6>Upload a different photo...</h6>
+    </div><hr><br>
+   </div>
+   <div
+    class="col-md-9"
+   >
+    <div
+     class="tab-content"
+    >
+     <div
+      class="tab-pane active"
+     >
+      <hr>
+       <div
+        class="col-md-6"
+       >
+          <p>First Name<h4>
+            <%= current_user.first_name %></h4></p>
+       </div>
+       <div
+        class="col-md-6"
+       >
+         <%= link_to 'edit user', edit_user_registration_path %>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+</div>
