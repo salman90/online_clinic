@@ -188,8 +188,10 @@ body {
 }
 
 #login .form-wrap {
-    width: 30%;
+  @media (min-width: 1200px) {
+    width: 50%;
     margin: 0 auto;
+  }
 }
 
 #login h1 {
