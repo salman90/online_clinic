@@ -41,6 +41,8 @@ gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 gem 'bootstrap-sass-rails-rtl'
 gem 'devise-i18n'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick', '~> 4.3'
 
 # gem 'rtlize'
 

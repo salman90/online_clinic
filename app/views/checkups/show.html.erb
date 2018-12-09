@@ -1,154 +1,161 @@
 <div class='container'>
-  <div class="table-responsive">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th scope="col"><%= t('first name') %></th>
-          <th scope="col"><%= t('middle name') %></th>
-          <th scope="col"><%= t('last name') %></th>
-          <th scope="col"><%= t('file number') %></th>
-          <th scope="col"><%= t('gender') %></th>
-          <th scope="col"><%= t('age') %></th>
-          <th scope="col"><%= t('married') %></th>
-          <th scope="col"><%= t('children') %></th>
-          <th scope="col"><%= t('work') %></th>
-          <th scope="col"><%= t('weight before surgery') %></th>
-          <th scope="col"><%= t('height') %></th>
-          <th scope="col"><%= t('body mass before surgery') %></th>
-          <th scope="col"><%= t('classification of body mass') %></th>
-          <th scope="col"><%= t('perfect weight') %></th>
-          <th scope="col"><%= t('extra weight') %></th>
-          <th scope="col"><%= t('type of surgery') %></th>
-          <th scope="col"><%= t('associated diseases') %></th>
-          <th scope="col"><%= t('change in associated diseases') %></th>
-          <th scope="col"><%= t('blood pressure before surgery') %></th>
-          <th scope="col"><%= t('blood pressure after surgery') %></th>
-          <th scope="col"><%= t('diabetes before surgery') %></th>
-          <th scope="col"><%= t('diabetes after surgery') %></th>
-          <th scope="col"><%= t('arthritis before surgery') %></th>
-          <th scope="col"><%= t('arthritis after surgery') %></th>
-          <th scope="col"><%= t('sleep apnea before surgery') %></th>
-          <th scope="col"><%= t('sleep apnea after surgery') %></th>
-          <th scope="col"><%= t('asthma before surgery') %></th>
-          <th scope="col"><%= t('asthma after surgery') %></th>
-          <th scope="col"><%= t('thyroid disorders before surgery') %></th>
-          <th scope="col"><%= t('thyroid disorders after surgery') %></th>
-          <th scope="col"><%= t('increase in body fat before surgery') %></th>
-          <th scope="col"><%= t('increase in body fat after surgery') %></th>
-          <th scope="col"><%= t('psychological disorders before surgery') %></th>
-          <th scope="col"><%= t('psychological disorders after surgery') %></th>
-          <th scope="col"><%= t('lack of fertility before surgery') %></th>
-          <th scope="col"><%= t('lack of fertility after surgery') %></th>
-          <th scope="col"><%= t('varicose inferior varicose veins before surgery') %></th>
-          <th scope="col"><%= t('varicose inferior varicose veins after surgery') %></th>
-          <th scope="col"><%= t('incontinence before surgery') %></th>
-          <th scope="col"><%= t('incontinence after surgery') %></th>
-          <th scope="col"><%= t('menstruation before surgery') %></th>
-          <th scope="col"><%= t('menstruation after surgery') %></th>
-          <th scope="col"><%= t('polycystic ovaries before surgery') %></th>
-          <th scope="col"><%= t('polycystic ovaries after surgery') %></th>
-          <th scope="col"><%= t('smoking before surgery') %></th>
-          <th scope="col"><%= t('smoking after surgery') %></th>
-          <th scope="col"><%= t('disturbances before surgery') %></th>
-          <th scope="col"><%= t('disturbances after surgery') %></th>
-          <th scope="col"><%= t('current weight') %></th>
-          <th scope="col"><%= t('percentage of lost weight') %></th>
-          <th scope="col"><%= t('duration of surgery') %></th>
-          <th scope="col"><%= t('use of vitamins')  %></th>
-          <th scope="col"><%= t('forgetfulness') %></th>
-          <th scope="col"><%= t('anxiety') %></th>
-          <th scope="col"><%= t('skin') %></th>
-          <th scope="col"><%= t('nails') %></th>
-          <th scope="col"><%= t('hair loss') %></th>
-          <th scope="col"><%= t('sagging') %></th>
-          <th scope="col"><%= t('cosmetic surgery') %></th>
-          <th scope="col"><%= t('nausea') %></th>
-          <th scope="col"><%= t('resurrection') %></th>
-          <th scope="col"><%= t('dizziness') %></th>
-          <th scope="col"><%= t('Cholecystectomy') %></th>
-          <th scope="col"><%= t('reproduction after operation') %></th>
-          <th scope="col"><%= t('regrets the surgery') %></th>
-          <th scope="col"><%= t('recommended') %></th>
-          <th scope="col"><%= t('notes') %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr scope="row">
-           <td><%= @checkup.first_name %></td>
-           <td><%= @checkup.middle_name %></td>
-           <td><%= @checkup.last_name %></td>
-           <td><%= @checkup.file_number %></td>
-           <td><%= @checkup.sex %></td>
-           <td><%= @checkup.age %></td>
-           <td><%= @checkup.married %></td>
-           <td><%= @checkup.children %></td>
-           <td><%= @checkup.work %></td>
-           <td><%= @checkup.weight_before_surgery %></td>
-           <td><%= @checkup.height %></td>
-           <td><%= @checkup.body_mass_before_surgery %></td>
-           <td><%= @checkup.classification_of_body_mass %></td>
-           <td><%= @checkup.perfect_weight %></td>
-           <td><%= @checkup.extra_weight %></td>
-           <td><%= @checkup.type_of_surgery %></td>
-           <td><%= @checkup.associated_diseases %></td>
-           <td><%= @checkup.change_in_associated_diseases %></td>
-           <td><%= @checkup.blood_pressure_before_surgery %></td>
-           <td><%= @checkup.blood_pressure_after_surgery %></td>
-           <td><%= @checkup.diabetes_before_surgery %></td>
-           <td><%= @checkup.diabetes_after_surgery %></td>
-           <td><%= @checkup.arthritis_before_surgery %></td>
-           <td><%= @checkup.arthritis_after_surgery %></td>
-           <td><%= @checkup.sleep_apnea_before_surgery %></td>
-           <td><%= @checkup.sleep_apnea_after_surgery %></td>
-           <td><%= @checkup.asthma_before_surgery %></td>
-           <td><%= @checkup.asthma_after_surgery %></td>
-           <td><%= @checkup.thyroid_disorders_before_surgery %></td>
-           <td><%= @checkup.thyroid_disorders_after_surgery %></td>
-           <td><%= @checkup.increase_in_body_fat_before_surgery %></td>
-           <td><%= @checkup.increase_in_body_fat_after_surgery %></td>
-           <td><%= @checkup.psychological_disorders_before_surgery %></td>
-           <td><%= @checkup.psychological_disorders_after_surgery %></td>
-           <td><%= @checkup.lack_of_fertility_before_surgery %></td>
-           <td><%= @checkup.lack_of_fertility_after_surgery %></td>
-           <td><%= @checkup.varicose_inferior_varicose_veins_before_surgery %></td>
-           <td><%= @checkup.varicose_inferior_varicose_veins_after_surgery %></td>
-           <td><%= @checkup.incontinence_before_surgery %></td>
-           <td><%= @checkup.incontinence_after_surgery %></td>
-           <td><%= @checkup.menstruation_before_surgery %></td>
-           <td><%= @checkup.menstruation_after_surgery %></td>
-           <td><%= @checkup.polycystic_ovaries_before_surgery %></td>
-           <td><%= @checkup.polycystic_ovaries_after_surgery %></td>
-           <td><%= @checkup.smoking_before_surgery %></td>
-           <td><%= @checkup.smoking_after_surgery %></td>
-           <td><%= @checkup.disturbances_before_surgery %></td>
-           <td><%= @checkup.disturbances_after_surgery %></td>
-           <td><%= @checkup.current_weight %></td>
-           <td><%= @checkup.percentage_of_lost_weight %></td>
-           <td><%= @checkup.duration_of_surgery %></td>
-           <td><%= @checkup.use_of_vitamins %></td>
-           <td><%= @checkup.forgetfulness %></td>
-           <td><%= @checkup.anxiety %></td>
-           <td><%= @checkup.skin %></td>
-           <td><%= @checkup.nails %></td>
-           <td><%= @checkup.hair_loss %></td>
-           <td><%= @checkup.sagging %></td>
-           <td><%= @checkup.cosmetic_surgery %></td>
-           <td><%= @checkup.nausea %></td>
-           <td><%= @checkup.resurrection %></td>
-           <td><%= @checkup.dizziness %></td>
-           <td><%= @checkup.Cholecystectomy %></td>
-           <td><%= @checkup.reproduction_after_operation %></td>
-           <td><%= @checkup.regrets_the_surgery %></td>
-           <td><%= @checkup.recommended %></td>
-           <td><%= @checkup.notes %></td>
-           <td>
-             <%= link_to 'edit', edit_checkup_path(@checkup) %> or
-             <%= link_to 'delete', checkup_path(@checkup), method: :delete, data: { confirm: "Are you sure?" } %>
-           </td>
-        </tr>
-      </tbody>
-    </table>
+  <div>
+    <% if @checkup.image? %>
+     <%= image_tag @checkup.image.thumb.url %>
+    <% else %>
+     <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+    <% end %>
   </div>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col"><%= t('first name') %></th>
+            <th scope="col"><%= t('middle name') %></th>
+            <th scope="col"><%= t('last name') %></th>
+            <th scope="col"><%= t('file number') %></th>
+            <th scope="col"><%= t('gender') %></th>
+            <th scope="col"><%= t('age') %></th>
+            <th scope="col"><%= t('married') %></th>
+            <th scope="col"><%= t('children') %></th>
+            <th scope="col"><%= t('work') %></th>
+            <th scope="col"><%= t('weight before surgery') %></th>
+            <th scope="col"><%= t('height') %></th>
+            <th scope="col"><%= t('body mass before surgery') %></th>
+            <th scope="col"><%= t('classification of body mass') %></th>
+            <th scope="col"><%= t('perfect weight') %></th>
+            <th scope="col"><%= t('extra weight') %></th>
+            <th scope="col"><%= t('type of surgery') %></th>
+            <th scope="col"><%= t('associated diseases') %></th>
+            <th scope="col"><%= t('change in associated diseases') %></th>
+            <th scope="col"><%= t('blood pressure before surgery') %></th>
+            <th scope="col"><%= t('blood pressure after surgery') %></th>
+            <th scope="col"><%= t('diabetes before surgery') %></th>
+            <th scope="col"><%= t('diabetes after surgery') %></th>
+            <th scope="col"><%= t('arthritis before surgery') %></th>
+            <th scope="col"><%= t('arthritis after surgery') %></th>
+            <th scope="col"><%= t('sleep apnea before surgery') %></th>
+            <th scope="col"><%= t('sleep apnea after surgery') %></th>
+            <th scope="col"><%= t('asthma before surgery') %></th>
+            <th scope="col"><%= t('asthma after surgery') %></th>
+            <th scope="col"><%= t('thyroid disorders before surgery') %></th>
+            <th scope="col"><%= t('thyroid disorders after surgery') %></th>
+            <th scope="col"><%= t('increase in body fat before surgery') %></th>
+            <th scope="col"><%= t('increase in body fat after surgery') %></th>
+            <th scope="col"><%= t('psychological disorders before surgery') %></th>
+            <th scope="col"><%= t('psychological disorders after surgery') %></th>
+            <th scope="col"><%= t('lack of fertility before surgery') %></th>
+            <th scope="col"><%= t('lack of fertility after surgery') %></th>
+            <th scope="col"><%= t('varicose inferior varicose veins before surgery') %></th>
+            <th scope="col"><%= t('varicose inferior varicose veins after surgery') %></th>
+            <th scope="col"><%= t('incontinence before surgery') %></th>
+            <th scope="col"><%= t('incontinence after surgery') %></th>
+            <th scope="col"><%= t('menstruation before surgery') %></th>
+            <th scope="col"><%= t('menstruation after surgery') %></th>
+            <th scope="col"><%= t('polycystic ovaries before surgery') %></th>
+            <th scope="col"><%= t('polycystic ovaries after surgery') %></th>
+            <th scope="col"><%= t('smoking before surgery') %></th>
+            <th scope="col"><%= t('smoking after surgery') %></th>
+            <th scope="col"><%= t('disturbances before surgery') %></th>
+            <th scope="col"><%= t('disturbances after surgery') %></th>
+            <th scope="col"><%= t('current weight') %></th>
+            <th scope="col"><%= t('percentage of lost weight') %></th>
+            <th scope="col"><%= t('duration of surgery') %></th>
+            <th scope="col"><%= t('use of vitamins')  %></th>
+            <th scope="col"><%= t('forgetfulness') %></th>
+            <th scope="col"><%= t('anxiety') %></th>
+            <th scope="col"><%= t('skin') %></th>
+            <th scope="col"><%= t('nails') %></th>
+            <th scope="col"><%= t('hair loss') %></th>
+            <th scope="col"><%= t('sagging') %></th>
+            <th scope="col"><%= t('cosmetic surgery') %></th>
+            <th scope="col"><%= t('nausea') %></th>
+            <th scope="col"><%= t('resurrection') %></th>
+            <th scope="col"><%= t('dizziness') %></th>
+            <th scope="col"><%= t('Cholecystectomy') %></th>
+            <th scope="col"><%= t('reproduction after operation') %></th>
+            <th scope="col"><%= t('regrets the surgery') %></th>
+            <th scope="col"><%= t('recommended') %></th>
+            <th scope="col"><%= t('notes') %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr scope="row">
+             <td><%= @checkup.first_name %></td>
+             <td><%= @checkup.middle_name %></td>
+             <td><%= @checkup.last_name %></td>
+             <td><%= @checkup.file_number %></td>
+             <td><%= @checkup.sex %></td>
+             <td><%= @checkup.age %></td>
+             <td><%= @checkup.married %></td>
+             <td><%= @checkup.children %></td>
+             <td><%= @checkup.work %></td>
+             <td><%= @checkup.weight_before_surgery %></td>
+             <td><%= @checkup.height %></td>
+             <td><%= @checkup.body_mass_before_surgery %></td>
+             <td><%= @checkup.classification_of_body_mass %></td>
+             <td><%= @checkup.perfect_weight %></td>
+             <td><%= @checkup.extra_weight %></td>
+             <td><%= @checkup.type_of_surgery %></td>
+             <td><%= @checkup.associated_diseases %></td>
+             <td><%= @checkup.change_in_associated_diseases %></td>
+             <td><%= @checkup.blood_pressure_before_surgery %></td>
+             <td><%= @checkup.blood_pressure_after_surgery %></td>
+             <td><%= @checkup.diabetes_before_surgery %></td>
+             <td><%= @checkup.diabetes_after_surgery %></td>
+             <td><%= @checkup.arthritis_before_surgery %></td>
+             <td><%= @checkup.arthritis_after_surgery %></td>
+             <td><%= @checkup.sleep_apnea_before_surgery %></td>
+             <td><%= @checkup.sleep_apnea_after_surgery %></td>
+             <td><%= @checkup.asthma_before_surgery %></td>
+             <td><%= @checkup.asthma_after_surgery %></td>
+             <td><%= @checkup.thyroid_disorders_before_surgery %></td>
+             <td><%= @checkup.thyroid_disorders_after_surgery %></td>
+             <td><%= @checkup.increase_in_body_fat_before_surgery %></td>
+             <td><%= @checkup.increase_in_body_fat_after_surgery %></td>
+             <td><%= @checkup.psychological_disorders_before_surgery %></td>
+             <td><%= @checkup.psychological_disorders_after_surgery %></td>
+             <td><%= @checkup.lack_of_fertility_before_surgery %></td>
+             <td><%= @checkup.lack_of_fertility_after_surgery %></td>
+             <td><%= @checkup.varicose_inferior_varicose_veins_before_surgery %></td>
+             <td><%= @checkup.varicose_inferior_varicose_veins_after_surgery %></td>
+             <td><%= @checkup.incontinence_before_surgery %></td>
+             <td><%= @checkup.incontinence_after_surgery %></td>
+             <td><%= @checkup.menstruation_before_surgery %></td>
+             <td><%= @checkup.menstruation_after_surgery %></td>
+             <td><%= @checkup.polycystic_ovaries_before_surgery %></td>
+             <td><%= @checkup.polycystic_ovaries_after_surgery %></td>
+             <td><%= @checkup.smoking_before_surgery %></td>
+             <td><%= @checkup.smoking_after_surgery %></td>
+             <td><%= @checkup.disturbances_before_surgery %></td>
+             <td><%= @checkup.disturbances_after_surgery %></td>
+             <td><%= @checkup.current_weight %></td>
+             <td><%= @checkup.percentage_of_lost_weight %></td>
+             <td><%= @checkup.duration_of_surgery %></td>
+             <td><%= @checkup.use_of_vitamins %></td>
+             <td><%= @checkup.forgetfulness %></td>
+             <td><%= @checkup.anxiety %></td>
+             <td><%= @checkup.skin %></td>
+             <td><%= @checkup.nails %></td>
+             <td><%= @checkup.hair_loss %></td>
+             <td><%= @checkup.sagging %></td>
+             <td><%= @checkup.cosmetic_surgery %></td>
+             <td><%= @checkup.nausea %></td>
+             <td><%= @checkup.resurrection %></td>
+             <td><%= @checkup.dizziness %></td>
+             <td><%= @checkup.Cholecystectomy %></td>
+             <td><%= @checkup.reproduction_after_operation %></td>
+             <td><%= @checkup.regrets_the_surgery %></td>
+             <td><%= @checkup.recommended %></td>
+             <td><%= @checkup.notes %></td>
+             <td>
+               <%= link_to 'edit', edit_checkup_path(@checkup) %> or
+               <%= link_to 'delete', checkup_path(@checkup), method: :delete, data: { confirm: "Are you sure?" } %>
+             </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   <h3><%= t('Comments') %></h3>
   <div>
      <%= form_for [@checkup, @comment] do |f| %>

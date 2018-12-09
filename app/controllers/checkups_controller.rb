@@ -109,7 +109,8 @@ class CheckupsController < ApplicationController
        :smoking_before_surgery,
        :smoking_after_surgery,
        :disturbances_before_surgery,
-       :disturbances_after_surgery
+       :disturbances_after_surgery,
+       :image
      )
    end
 
